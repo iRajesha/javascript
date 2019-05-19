@@ -92,4 +92,40 @@ console.log(name);`
 
 20. use forEach if possible `
 [1,2,3,5,5,6,6,'sss',{a:'blur',b:'c'}].forEach((item,index) => {console.log(item,index)})`
-        
+
+21. Some of the higher order functions are `forEach,filter,map,reduce`
+22. use `charPointAt()` to get the character code at an index
+            Best approach is 
+            <code>let roseDragon = "🌹🐉"; <br>
+            for (let char of roseDragon) {
+            console.log(char);
+            } </code>
+
+23. The `some` method is another higher-order function. It takes a test function and tells you whether that function returns true for any of the elements in the array
+
+24. Arrays provide a number of useful higher-order methods. You can use forEach to loop over the elements in an array. The filter method returns a new array containing only the elements that pass the predicate function. Transforming an array by putting each element through a function is done with map. You can use reduce to combine all the elements in an array into a single value. The some method tests whether any element matches a given predicate function. And findIndex finds the position of the first element that matches a predicate.
+
+
+
+24. `Maps` are not same as `Objects`. `Objects` would have derived from some kind of `prototype` and would have methods and proerties from `prototype`
+
+25. you can create a `Map` by passing null to `Object.create(null)`  - Just one trick but there is a Key word which we can use to create the `Map` . Use `map.has(key)` to check if the value is present. `set,get ` are used to add, retrieve 
+
+26. `in` - operator will check for properties in objects as well as in it's prototype but `hasOwnProperty` will not check in one's prototype
+
+27. A good example for Polymorphism is that For/Of loop would work with serveral kind of data structures because these data structures implement certain methods required for `for/of` loop to work, they expose the methods through interface.
+
+28. `Symbols` are used to resolve the confusion between different interfces having same names
+
+            const toStringSymbol = Symbol("toString");
+            Array.prototype[toStringSymbol] = function() {
+            return `${this.length} cm of blue yarn`;
+            };
+
+            console.log([1, 2].toString());
+            // → 1,2
+            console.log([1, 2][toStringSymbol]());
+            // → 2 cm of blue yarn
+29. Inside a class declaration , functions written with `static` key word would be a part of the constructor.
+30. Making an `Object` const will only make sure that the `Object` cannot be pointed to something else but you can change the properties it holds
+31. Use `Object.freez()` to make sure , property updates to Object are ignored.

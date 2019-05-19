@@ -1,2 +1,7 @@
+let longString = 'first last firstf lastt\nfirstff lastt\nfirsttt lasttt\nfirstf lastt\nfirstff lastt\nfirsttt lasttt\nfirstf lastt\nfirstff lastt\nfirsttt lasttt\nfirstf lastt\nfirstff lastt\nfirsttt lasttt\nfirstf lastt\nfirstff lastt\nfirsttt lasttt\nfirstf lastt\nfirstff lastt\nfirsttt lasttt\nfirstf lastt\nfirstff lastt\nfirsttt lasttt\nfirstf lastt\nfirstff lastt\nfirsttt lasttt\nfirstf lastt\nfirstff lastt\nfirsttt lasttt\nfirstf lastt\nfirstff lastt\nfirsttt lasttt\nfirstf lastt\nfirstff lastt\nfirsttt lasttt'
 
-[1,2,3,5,5,6,6,'sss',{a:'blur',b:'c'}].forEach((item,index,array) => {console.log(item,index,array)})
+//console.log(longString)
+longString = 'first last\nfirstt lastt\nfirstttt lastttt'
+let matched = /(\w+ \w+\n)/.exec(longString)
+//console.log(matched)
+console.log(longString.replace(/(w+) (w+)/, "$2,$1"))
