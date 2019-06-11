@@ -28,3 +28,11 @@ after an element, for example, requires it to occur exactly four times. It is al
         //   John McCarthy
         //   Philip Wadler
 13. In javascript date , month starts from 0 , which makes 11 as december.
+
+14. `[\d.]` means any digit or a period character. But the period itself, between square brackets, loses its special meaning. The same goes for other special characters, such as `+`.
+
+15. `*,+,?,{}` are are greedy. They match as much as they can backtrack if doesnt find the required character. This is expensive `*?,+?.{}?` are non-greedy . They end the match if the minimum required match is consumed.
+
+16. When using /g or /y (Global expressions) every time there is match , lastIndex will point to the next character where the search will be resumed.
+
+17.     
