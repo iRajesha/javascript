@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My first HTML</title>
+    </head>
+    
+    <body>
+      <h1>Heading with a <span>span</span> element.</h1>
+<p>A paragraph with <span>one</span>, <span>two</span>
+  spans.</p>
+
+<script>
+  function byTagName(node, tagName) {
+    let allChildren =Array.from(node.childNodes)
+    //console.log(allChildren)
+    let nodesByTag = []
+    allChildren.forEach(element => {
+      console.log(element)
+      if(element.nodeType == document.ELEMENT_NODE && element.nodeName == tagName.toUpperCase()){
+        nodesByTag.push(element)
+      }
+    });
+    return nodesByTag;
+  }
+
+  console.log(byTagName(document.body, "h1").length);
+  // → 1
+  console.log(byTagName(document.body, "span").length);
+  // → 3
+  let para = document.querySelector("p");
+  console.log(byTagName(para, "span").length);
+  // → 2
+</script>
+    </body>
+</html>
