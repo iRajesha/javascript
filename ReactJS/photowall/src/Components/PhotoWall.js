@@ -8,14 +8,13 @@ function PhotoWall(props){
     <Link className="addIcon"  to="/AddPhoto"></Link>
     <div className="photoGrid">{props.posts
         .sort((a,b)=> {return b.id - a.id})
-        .map((post,index)=><Photo key={index} post={post} onRemovePhoto={props.onRemovePhoto}></Photo>)}</div>
+        .map((post,index)=><Photo key={index} post={post} {...props} index={index}></Photo>)}</div>
     </div>
 }
 
 
 PhotoWall.propTypes = {
     posts : PropTypes.array.isRequired,
-    onRemovePhoto: PropTypes.func.isRequired,
    
 }
 

@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Title from './Title'
 class AddPhoto extends Component {
     constructor(){
         super()
@@ -9,16 +10,19 @@ class AddPhoto extends Component {
          const link = event.target.elements.link.value
          const description = event.target.elements.description.value
          if(link && description){
-            this.props.onAddPhoto( {  
+            this.props.addPost( {  
                 id: Number(new Date()),  
                 description: description,  
                 imageLink: link
                 })
+            this.props.onHistory.push("/")
          }
+         
     }
     render() {
         return <div>
-            <h1>Add Photo</h1>
+            <Title/>
+            
             <div className="form">
             <form onSubmit={this.handleSubmit}> 
                 <input type="text" placeholder="Link" name="link"></input>
