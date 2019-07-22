@@ -10,7 +10,9 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "0.9.5",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "fabric-ca-client": "~1.4.0",
+    "fabric-network": "~1.4.0"
   },
   "devDependencies": {},
   "scripts": {
