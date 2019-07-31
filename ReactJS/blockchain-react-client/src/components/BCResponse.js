@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Axios from 'axios'
+import {queryBlockchain} from '../blockchain/query'
 class BCResponse extends Component {
     constructor(props){
         super(props)
@@ -19,6 +20,7 @@ class BCResponse extends Component {
             isResponseLoading:false
         })
         //this.state.isResponseLoading=false
+        response=queryBlockchain()
         this.props.loadResponse(response)
         
 

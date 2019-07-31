@@ -12,7 +12,7 @@ const ccpPath = path.resolve(__dirname,'network', 'connection.json');
 const ccpJSON = fs.readFileSync(ccpPath, 'utf8');
 const ccp = JSON.parse(ccpJSON);
 
-async function main() {
+async function query() {
     try {
 
         // Create a new file system based wallet for managing identities.
@@ -49,5 +49,8 @@ async function main() {
         process.exit(1);
     }
 }
+export default async function queryBlockchain(){
+    let response = await query()
+    return response
+}
 
-main();
