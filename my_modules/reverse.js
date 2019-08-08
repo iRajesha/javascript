@@ -1,1 +1,0 @@
-exports.reverse = function(inputString) {return Array.from(inputString).reverse()}
