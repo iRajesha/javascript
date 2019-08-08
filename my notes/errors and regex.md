@@ -35,4 +35,4 @@ after an element, for example, requires it to occur exactly four times. It is al
 
 16. When using /g or /y (Global expressions) every time there is match , lastIndex will point to the next character where the search will be resumed.
 
-17.     
+17. A good article on new features https://www.smashingmagazine.com/2019/02/regexp-features-regular-expressions/

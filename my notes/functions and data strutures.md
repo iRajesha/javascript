@@ -129,3 +129,4 @@ console.log(name);`
 29. Inside a class declaration , functions written with `static` key word would be a part of the constructor.
 30. Making an `Object` const will only make sure that the `Object` cannot be pointed to something else but you can change the properties it holds
 31. Use `Object.freez()` to make sure , property updates to Object are ignored.
+32. `call and apply` - both can be called on functions, which they run in the context of the first argument. In `call` the subsequent arguments are passed in to the function as they are, while `apply` expects the second argument to be an array that it unpacks as arguments for the called function.
